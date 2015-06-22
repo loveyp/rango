@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load bootstrap3 %}
+
+{% block title %}Add Category{% endblock %}
+
+{% block body_block %}
+
+        <form role="form" id="category_form" method="post" action="{% url 'add_category' %}">
+			<h2 class="form-signin-heading">Add a Category</a></h2>
+            {% csrf_token %}
+            
+             {% bootstrap_form form %}
+             
+			 {% buttons %}
+        		<button type="submit" class="btn btn-primary">
+            	{% bootstrap_icon "star" %} Add Category
+        		</button>
+    		{% endbuttons %}
+   
+        </form>
+   
+{% endblock %}

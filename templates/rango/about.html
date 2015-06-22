@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+
+{% block title %}About{% endblock %}
+
+{% block body_block %}
+    <div class="page-header">
+       <h1>About</h1>
+    </div>
+    <div>
+	    <button onClick="alert('You clicked the button using Javascript.');"> Click Me - I run Javascript </button>
+		<br />
+		
+		<button id="about-btn"> Click Me - I'm Javascript on Speed</button>
+		
+		<p class="ouch">Selector:select class use $(".ouch")</p>	
+		
+		<p>Selector:select html element use $("p")</p>
+		
+		<br/>
+	    <img  width="" height="" src="{% static "images/rango.jpg" %}" alt="Picture of Rango" /> <!-- New line -->
+    </div>
+    <div id="msg">Hello</div>
+{% endblock %}
